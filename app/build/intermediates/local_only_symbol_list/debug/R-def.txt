@@ -1,6 +1,33 @@
 R_DEF: Internal format may change without notice
 local
+dimen input_height
+dimen input_height_land
+dimen input_height_tablet
+dimen input_padding
+dimen input_padding_land
+dimen input_padding_tablet
+dimen logo_size
+dimen logo_size_land
+dimen logo_size_tablet
+dimen register_text_size
+dimen register_text_size_land
+dimen register_text_size_tablet
+dimen title_text_size
+dimen title_text_size_land
+dimen title_text_size_tablet
+drawable rounded_button_green
+drawable rounded_edittext
+drawable rounded_edittext_gray
+id emailEditText
+id loginButton
+id loginCardView
+id logoImageView
+id passwordEditText
+id registerTextView
+id subtitleTextView
 id textView
+id titleTextView
+layout activity_login
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round

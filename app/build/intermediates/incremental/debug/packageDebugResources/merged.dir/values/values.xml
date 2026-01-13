@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">eqx_android</string>
-    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        
-    </style>
-</resources>

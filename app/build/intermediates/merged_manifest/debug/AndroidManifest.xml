@@ -26,7 +26,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.App" >
         <activity
-            android:name="com.example.eqx_android.MainActivity"
+            android:name="com.example.eqx_android.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +34,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.eqx_android.MainActivity"
+            android:exported="true" />
         <activity
             android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />

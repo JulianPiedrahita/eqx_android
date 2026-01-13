@@ -2219,9 +2219,18 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen input_height
+dimen input_height_land
+dimen input_height_tablet
+dimen input_padding
+dimen input_padding_land
+dimen input_padding_tablet
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen logo_size
+dimen logo_size_land
+dimen logo_size_tablet
 dimen m3_alert_dialog_action_bottom_padding
 dimen m3_alert_dialog_action_top_padding
 dimen m3_alert_dialog_corner_size
@@ -2852,6 +2861,12 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen register_text_size
+dimen register_text_size_land
+dimen register_text_size_tablet
+dimen title_text_size
+dimen title_text_size_land
+dimen title_text_size_tablet
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -3045,6 +3060,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable rounded_button_green
+drawable rounded_edittext
+drawable rounded_edittext_gray
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3225,6 +3243,7 @@ id edge
 id edit_query
 id edit_text_id
 id elastic
+id emailEditText
 id embed
 id end
 id endToStart
@@ -3294,6 +3313,9 @@ id line3
 id linear
 id listMode
 id list_item
+id loginButton
+id loginCardView
+id logoImageView
 id m3_side_sheet
 id marquee
 id masked
@@ -3398,6 +3420,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id passwordEditText
 id password_toggle
 id path
 id pathRelative
@@ -3413,6 +3436,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id registerTextView
 id report_drawn
 id reverseSawtooth
 id right
@@ -3481,6 +3505,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id subtitleTextView
 id supportScrollUp
 id tabMode
 id tag_accessibility_actions
@@ -3516,6 +3541,7 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id titleTextView
 id title_template
 id toggle
 id top
@@ -3667,6 +3693,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_login
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item

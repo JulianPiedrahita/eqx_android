@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:1:1-19:12
-INJECTED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:1:1-19:12
-INJECTED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:1:1-19:12
-INJECTED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:1:1-19:12
+ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:1:1-20:12
+INJECTED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:1:1-20:12
+INJECTED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:1:1-20:12
+INJECTED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:1:1-20:12
 MERGED from [androidx.compose.material3:material3:1.1.2] C:\Users\piedr\.gradle\caches\transforms-4\ec65d150f0c34cb0fa085ce99f9f5843\transformed\jetified-material3-1.1.2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\piedr\.gradle\caches\transforms-4\97ffebd89a54c28b6875f2648565307a\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\piedr\.gradle\caches\transforms-4\f5f174d4fc61d9596583245ff109b10c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -82,8 +82,8 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\piedr\.gradle\caches\transform
 	xmlns:android
 		ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:1:11-69
 application
-ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:4:5-17:19
-INJECTED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:4:5-17:19
+ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:4:5-18:19
+INJECTED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:4:5-18:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\piedr\.gradle\caches\transforms-4\97ffebd89a54c28b6875f2648565307a\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\piedr\.gradle\caches\transforms-4\97ffebd89a54c28b6875f2648565307a\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\piedr\.gradle\caches\transforms-4\f5f174d4fc61d9596583245ff109b10c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -120,12 +120,12 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\piedr\.gradle\cach
 		ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:5:9-35
 	android:theme
 		ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:10:9-41
-activity#com.example.eqx_android.MainActivity
+activity#com.example.eqx_android.LoginActivity
 ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:11:9-16:20
 	android:exported
-		ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:11:48-71
+		ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:11:49-72
 	android:name
-		ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:11:19-47
+		ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:11:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:12:13-15:29
 action#android.intent.action.MAIN
@@ -136,6 +136,12 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:14:17-77
 	android:name
 		ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:14:27-74
+activity#com.example.eqx_android.MainActivity
+ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:17:9-74
+	android:exported
+		ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:17:48-71
+	android:name
+		ADDED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml:17:19-47
 uses-sdk
 INJECTED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\piedr\Documents\eqx_android\app\src\main\AndroidManifest.xml
