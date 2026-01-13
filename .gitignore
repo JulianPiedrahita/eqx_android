@@ -42,3 +42,6 @@ app/build/
 app/intermediates/
 app/generated/
 app/.cxx/
+
+# BFG Repo-Cleaner
+bfg.jar
