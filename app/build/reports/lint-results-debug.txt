@@ -1,0 +1,298 @@
+C:\Users\piedr\Documents\eqx_android\app\build.gradle:12: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdkVersion 34
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+C:\Users\piedr\Documents\eqx_android\app\build.gradle:47: Warning: A newer version of org.jetbrains.kotlin:kotlin-stdlib than 1.9.20 is available: 2.1.20 [GradleDependency]
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.20"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\build.gradle:48: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.17.0 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.12.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\build.gradle:49: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\build.gradle:50: Warning: A newer version of com.google.android.material:material than 1.10.0 is available: 1.13.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.10.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\build.gradle:51: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\build.gradle:54: Warning: A newer version of androidx.compose:compose-bom than 2023.10.01 is available: 2025.12.01 [GradleDependency]
+    implementation platform('androidx.compose:compose-bom:2023.10.01')
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\build.gradle:58: Warning: A newer version of androidx.activity:activity-compose than 1.8.2 is available: 1.12.2 [GradleDependency]
+    implementation 'androidx.activity:activity-compose:1.8.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-land\activity_login.xml:7: Warning: Possible overdraw: Root element paints background #222B45 with a theme that also paints a background (inferred theme is @style/Theme.App) [Overdraw]
+    android:background="#222B45"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-sw600dp\activity_login.xml:7: Warning: Possible overdraw: Root element paints background #222B45 with a theme that also paints a background (inferred theme is @style/Theme.App) [Overdraw]
+    android:background="#222B45"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_login.xml:7: Warning: Possible overdraw: Root element paints background #FFFFFF with a theme that also paints a background (inferred theme is @style/Theme.App) [Overdraw]
+    android:background="#FFFFFF"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:2: Warning: The resource R.dimen.logo_size appears to be unused [UnusedResources]
+    <dimen name="logo_size">120dp</dimen>
+           ~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:3: Warning: The resource R.dimen.logo_size_tablet appears to be unused [UnusedResources]
+    <dimen name="logo_size_tablet">180dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:4: Warning: The resource R.dimen.logo_size_land appears to be unused [UnusedResources]
+    <dimen name="logo_size_land">100dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:5: Warning: The resource R.dimen.input_height appears to be unused [UnusedResources]
+    <dimen name="input_height">48dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:6: Warning: The resource R.dimen.input_height_tablet appears to be unused [UnusedResources]
+    <dimen name="input_height_tablet">56dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:7: Warning: The resource R.dimen.input_height_land appears to be unused [UnusedResources]
+    <dimen name="input_height_land">48dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:8: Warning: The resource R.dimen.input_padding appears to be unused [UnusedResources]
+    <dimen name="input_padding">16dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:9: Warning: The resource R.dimen.input_padding_tablet appears to be unused [UnusedResources]
+    <dimen name="input_padding_tablet">20dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:10: Warning: The resource R.dimen.input_padding_land appears to be unused [UnusedResources]
+    <dimen name="input_padding_land">16dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:11: Warning: The resource R.dimen.title_text_size appears to be unused [UnusedResources]
+    <dimen name="title_text_size">28sp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:12: Warning: The resource R.dimen.title_text_size_tablet appears to be unused [UnusedResources]
+    <dimen name="title_text_size_tablet">36sp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:13: Warning: The resource R.dimen.title_text_size_land appears to be unused [UnusedResources]
+    <dimen name="title_text_size_land">24sp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:14: Warning: The resource R.dimen.register_text_size appears to be unused [UnusedResources]
+    <dimen name="register_text_size">16sp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:15: Warning: The resource R.dimen.register_text_size_tablet appears to be unused [UnusedResources]
+    <dimen name="register_text_size_tablet">20sp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\values\dimens.xml:16: Warning: The resource R.dimen.register_text_size_land appears to be unused [UnusedResources]
+    <dimen name="register_text_size_land">16sp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\mipmap\ic_launcher_round.png: Warning: Launcher icon used as round icon did not have a circular shape [IconLauncherShape]
+
+   Explanation for issues of type "IconLauncherShape":
+   According to the Android Design Guide
+   (https://d.android.com/r/studio-ui/designer/material/iconography) your
+   launcher icons should "use a distinct silhouette", a "three-dimensional,
+   front view, with a slight perspective as if viewed from above, so that
+   users perceive some depth."
+
+   The unique silhouette implies that your launcher icon should not be a
+   filled square.
+
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\mipmap\ic_launcher_round.png: Warning: The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png [IconDuplicates]
+
+   Explanation for issues of type "IconDuplicates":
+   If an icon is repeated under different names, you can consolidate and just
+   use one of the icons and delete the others to make your application
+   smaller. However, duplicated icons usually are not intentional and can
+   sometimes point to icons that were accidentally overwritten or accidentally
+   not updated.
+
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-land\activity_login.xml:33: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-sw600dp\activity_login.xml:33: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-land\activity_login.xml:49: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-sw600dp\activity_login.xml:49: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_login.xml:60: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_login.xml:72: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-land\activity_login.xml:10: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-sw600dp\activity_login.xml:10: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_login.xml:32: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-land\activity_login.xml:24: Warning: Hardcoded string "EQX 222", should use @string resource [HardcodedText]
+        android:text="EQX 222"
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-sw600dp\activity_login.xml:24: Warning: Hardcoded string "EQX 222", should use @string resource [HardcodedText]
+        android:text="EQX 222"
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-land\activity_login.xml:37: Warning: Hardcoded string "Correo electrónico", should use @string resource [HardcodedText]
+        android:hint="Correo electrónico"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-sw600dp\activity_login.xml:37: Warning: Hardcoded string "Correo electrónico", should use @string resource [HardcodedText]
+        android:hint="Correo electrónico"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_login.xml:43: Warning: Hardcoded string "EQX", should use @string resource [HardcodedText]
+                android:text="EQX"
+                ~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-land\activity_login.xml:53: Warning: Hardcoded string "Contraseña", should use @string resource [HardcodedText]
+        android:hint="Contraseña"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-sw600dp\activity_login.xml:53: Warning: Hardcoded string "Contraseña", should use @string resource [HardcodedText]
+        android:hint="Contraseña"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_login.xml:54: Warning: Hardcoded string "Equipar para multiplicar", should use @string resource [HardcodedText]
+                android:text="Equipar para multiplicar"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_login.xml:64: Warning: Hardcoded string "Correo electrónico", should use @string resource [HardcodedText]
+                android:hint="Correo electrónico"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-land\activity_login.xml:69: Warning: Hardcoded string "Iniciar Sesión", should use @string resource [HardcodedText]
+        android:text="Iniciar Sesión"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-sw600dp\activity_login.xml:69: Warning: Hardcoded string "Iniciar Sesión", should use @string resource [HardcodedText]
+        android:text="Iniciar Sesión"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_login.xml:76: Warning: Hardcoded string "Contraseña", should use @string resource [HardcodedText]
+                android:hint="Contraseña"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-land\activity_login.xml:83: Warning: Hardcoded string "¿No tienes cuenta? Regístrate", should use @string resource [HardcodedText]
+        android:text="¿No tienes cuenta? Regístrate"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout-sw600dp\activity_login.xml:83: Warning: Hardcoded string "¿No tienes cuenta? Regístrate", should use @string resource [HardcodedText]
+        android:text="¿No tienes cuenta? Regístrate"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_login.xml:88: Warning: Hardcoded string "Iniciar Sesión", should use @string resource [HardcodedText]
+                android:text="Iniciar Sesión"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_login.xml:98: Warning: Hardcoded string "¿No tienes cuenta? Regístrate", should use @string resource [HardcodedText]
+                android:text="¿No tienes cuenta? Regístrate"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\piedr\Documents\eqx_android\app\src\main\res\layout\activity_main.xml:13: Warning: Hardcoded string "Hello, Kotlin!", should use @string resource [HardcodedText]
+        android:text="Hello, Kotlin!"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 54 warnings
