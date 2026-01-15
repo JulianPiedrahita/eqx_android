@@ -14,17 +14,19 @@ android {
         versionName "1.0"
     }
     buildTypes {
+        // Para emulador usa 10.0.2.2, para dispositivo físico usa la IP local de tu PC
+        // Ejemplo para dispositivo físico: '"http://192.168.1.100:8000"'
         debug {
-            buildConfigField "String", "BASE_URL", '"https://dev-backend-url"'
+            buildConfigField "String", "BASE_URL", '"http://10.0.2.2:8000"' // Cambia aquí según el entorno
         }
         qa {
             initWith debug
-            buildConfigField "String", "BASE_URL", '"https://qa-backend-url"'
+            buildConfigField "String", "BASE_URL", '"http://10.0.2.2:8000"' // Cambia aquí según el entorno
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "BASE_URL", '"https://prod-backend-url"'
+            buildConfigField "String", "BASE_URL", '"https://tu-backend-produccion.com"' // Cambia aquí para producción
         }
     }
     compileOptions {

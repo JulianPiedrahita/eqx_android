@@ -16,17 +16,72 @@ import kotlinx.coroutines.launch
 
 class LoginActivity : ComponentActivity() {
     private val loginUseCase by lazy {
-        LoginUseCase(ApiServiceImpl(Constants.BASE_URL))
+        com.example.eqx_android.domain.usecase.SecureLoginUseCase(
+            com.example.eqx_android.data.repository.SecureApiServiceImpl(com.example.eqx_android.util.Constants.BASE_URL)
+        )
     }
+
+    private lateinit var emailEditText: EditText
+    private lateinit var passwordEditText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val emailEditText = findViewById<EditText>(R.id.emailEditText)
-        val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
+        emailEditText = findViewById(R.id.emailEditText)
+        passwordEditText = findViewById(R.id.passwordEditText)
+        val emailLabel = findViewById<TextView>(R.id.emailLabel)
+        val passwordLabel = findViewById<TextView>(R.id.passwordLabel)
         val loginButton = findViewById<Button>(R.id.loginButton)
         val registerTextView = findViewById<TextView>(R.id.registerTextView)
+
+        emailEditText.addTextChangedListener(object : android.text.TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: android.text.Editable?) {
+                val email = s.toString().trim()
+                if (!com.example.eqx_android.util.OwaspUtils.isValidEmail(email)) {
+                    emailLabel.error = "Correo inválido"
+                } else {
+                    emailLabel.error = null
+                }
+            }
+        })
+
+        passwordEditText.addTextChangedListener(object : android.text.TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: android.text.Editable?) {
+                val password = s.toString().trim()
+                if (!com.example.eqx_android.util.OwaspUtils.isValidPassword(password)) {
+                    passwordLabel.error = "Mínimo 8 caracteres, mayúscula, minúscula y número"
+                } else {
+                    passwordLabel.error = null
+                }
+            }
+        })
+
+        emailEditText.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                val email = emailEditText.text.toString().trim()
+                if (!com.example.eqx_android.util.OwaspUtils.isValidEmail(email)) {
+                    emailLabel.error = "Correo inválido"
+                } else {
+                    emailLabel.error = null
+                }
+            }
+        }
+
+        passwordEditText.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                val password = passwordEditText.text.toString().trim()
+                if (!com.example.eqx_android.util.OwaspUtils.isValidPassword(password)) {
+                    passwordLabel.error = "Mínimo 8 caracteres, mayúscula, minúscula y número"
+                } else {
+                    passwordLabel.error = null
+                }
+            }
+        }
 
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString().trim()
@@ -35,14 +90,26 @@ class LoginActivity : ComponentActivity() {
                 Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            if (!com.example.eqx_android.util.OwaspUtils.isValidEmail(email)) {
+                Toast.makeText(this, "Correo inválido", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (!com.example.eqx_android.util.OwaspUtils.isValidPassword(password)) {
+                Toast.makeText(this, "Contraseña inválida: mínimo 8 caracteres, mayúscula, minúscula y número", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
             lifecycleScope.launch {
-                val result = loginUseCase(UserCredentials(email, password))
-                if (result.success) {
-                    Toast.makeText(this@LoginActivity, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-                    finish()
-                } else {
-                    Toast.makeText(this@LoginActivity, result.error ?: "Error desconocido", Toast.LENGTH_SHORT).show()
+                try {
+                    val result = loginUseCase(com.example.eqx_android.domain.model.UserCredentials(email, password))
+                    if (result.success) {
+                        Toast.makeText(this@LoginActivity, "Inicio de sesión exitoso. Token: ${result.token}", Toast.LENGTH_LONG).show()
+                        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                        finish()
+                    } else {
+                        Toast.makeText(this@LoginActivity, result.error ?: "Credenciales incorrectas o error de red", Toast.LENGTH_SHORT).show()
+                    }
+                } catch (e: Exception) {
+                    Toast.makeText(this@LoginActivity, "No se pudo conectar al servidor", Toast.LENGTH_LONG).show()
                 }
             }
         }

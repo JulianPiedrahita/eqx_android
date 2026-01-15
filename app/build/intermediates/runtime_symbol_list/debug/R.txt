@@ -3243,6 +3243,7 @@ int id edit_query 0x7f0800ae
 int id edit_text_id 0x7f0800af
 int id elastic 0x7f0800b0
 int id emailEditText 0x7f0800b1
+int id emailLabel 0x7f080201
 int id embed 0x7f0800b2
 int id end 0x7f0800b3
 int id endToStart 0x7f0800b4
@@ -3420,6 +3421,7 @@ int id parentPanel 0x7f08015f
 int id parentRelative 0x7f080160
 int id parent_matrix 0x7f080161
 int id passwordEditText 0x7f080162
+int id passwordLabel 0x7f080202
 int id password_toggle 0x7f080163
 int id path 0x7f080164
 int id pathRelative 0x7f080165

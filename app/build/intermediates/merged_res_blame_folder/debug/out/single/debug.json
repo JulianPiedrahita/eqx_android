@@ -1,38 +1,42 @@
 [
     {
-        "merged": "com.example.eqx_android.app-merged_res-57:/layout-land_activity_login.xml.flat",
-        "source": "com.example.eqx_android.app-main-59:/layout-land/activity_login.xml"
+        "merged": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-merged_res-57:\\layout-land_activity_login.xml.flat",
+        "source": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-main-59:\\layout-land\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-merged_res-57:\\drawable_rounded_edittext.xml.flat",
+        "source": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-main-59:\\drawable\\rounded_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-merged_res-57:\\mipmap_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-main-59:\\mipmap\\ic_launcher_round.png"
     },
     {
         "merged": "com.example.eqx_android.app-merged_res-57:/layout_activity_login.xml.flat",
         "source": "com.example.eqx_android.app-main-59:/layout/activity_login.xml"
     },
     {
-        "merged": "com.example.eqx_android.app-merged_res-57:/layout_activity_main.xml.flat",
-        "source": "com.example.eqx_android.app-main-59:/layout/activity_main.xml"
+        "merged": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-merged_res-57:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-main-59:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.example.eqx_android.app-merged_res-57:/layout-sw600dp_activity_login.xml.flat",
-        "source": "com.example.eqx_android.app-main-59:/layout-sw600dp/activity_login.xml"
+        "merged": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-merged_res-57:\\layout-sw600dp_activity_login.xml.flat",
+        "source": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-main-59:\\layout-sw600dp\\activity_login.xml"
     },
     {
-        "merged": "com.example.eqx_android.app-merged_res-57:/drawable_rounded_edittext_gray.xml.flat",
-        "source": "com.example.eqx_android.app-main-59:/drawable/rounded_edittext_gray.xml"
+        "merged": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-merged_res-57:\\mipmap_ic_launcher.png.flat",
+        "source": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-main-59:\\mipmap\\ic_launcher.png"
     },
     {
-        "merged": "com.example.eqx_android.app-merged_res-57:/drawable_rounded_edittext.xml.flat",
-        "source": "com.example.eqx_android.app-main-59:/drawable/rounded_edittext.xml"
+        "merged": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-merged_res-57:\\drawable_rounded_edittext_gray.xml.flat",
+        "source": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-main-59:\\drawable\\rounded_edittext_gray.xml"
     },
     {
-        "merged": "com.example.eqx_android.app-merged_res-57:/mipmap_ic_launcher_round.png.flat",
-        "source": "com.example.eqx_android.app-main-59:/mipmap/ic_launcher_round.png"
+        "merged": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-merged_res-57:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-main-59:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.eqx_android.app-merged_res-57:/drawable_rounded_button_green.xml.flat",
-        "source": "com.example.eqx_android.app-main-59:/drawable/rounded_button_green.xml"
-    },
-    {
-        "merged": "com.example.eqx_android.app-merged_res-57:/mipmap_ic_launcher.png.flat",
-        "source": "com.example.eqx_android.app-main-59:/mipmap/ic_launcher.png"
+        "merged": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-merged_res-57:\\drawable_rounded_button_green.xml.flat",
+        "source": "C:\\Users\\piedr\\.gradle\\daemon\\8.6\\com.example.eqx_android.app-main-59:\\drawable\\rounded_button_green.xml"
     }
 ]
