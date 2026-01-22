@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.eqx_android.app-mergeQaResources-51:/values-es/values-es.xml",
+            "outputFile": "com.example.eqx_android.app-mergeQaResources-53:/values-es/values-es.xml",
             "map": [
                 {
                     "source": "C:\\Users\\piedr\\.gradle\\caches\\transforms-4\\93b3fa08e37de7ebbc6a2ceeb69f10c5\\transformed\\core-1.12.0\\res\\values-es\\values-es.xml",

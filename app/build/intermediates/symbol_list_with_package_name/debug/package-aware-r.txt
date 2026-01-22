@@ -3169,6 +3169,7 @@ id buttonPanel
 id cache_measures
 id callMeasure
 id cancel_button
+id captchaEditText
 id carryVelocity
 id center
 id centerCrop
@@ -3316,8 +3317,10 @@ id listMode
 id list_item
 id loginButton
 id loginCardView
+id loginTextView
 id logoImageView
 id m3_side_sheet
+id main_layout
 id marquee
 id masked
 id match_constraint
@@ -3438,7 +3441,9 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id registerButton
 id registerTextView
+id registerTitle
 id report_drawn
 id reverseSawtooth
 id right
@@ -3697,6 +3702,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
 layout activity_main
+layout activity_register
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

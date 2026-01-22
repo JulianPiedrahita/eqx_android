@@ -1,14 +1,4 @@
-import com.example.eqx_android.data.remote.CaptchaService
-// Simulación de servicio captcha
-class DummyCaptchaService : CaptchaService {
-    override suspend fun verifyCaptcha(response: String): Boolean {
-        // Simula siempre éxito
-        return response == "dummy_captcha"
-    }
-}
-import com.example.eqx_android.data.repository.OAuthServiceImpl
 package com.example.eqx_android
-
 
 import android.content.Intent
 import android.os.Bundle
@@ -26,12 +16,23 @@ import com.example.eqx_android.util.Constants
 import com.example.eqx_android.util.LoginAttemptLimiter
 import com.example.eqx_android.util.Logger
 import kotlinx.coroutines.launch
+import com.example.eqx_android.data.remote.CaptchaService
+import com.example.eqx_android.data.repository.OAuthServiceImpl
 
-
+// Simulación de servicio captcha
+class DummyCaptchaService : CaptchaService {
+    override suspend fun verifyCaptcha(response: String): Boolean {
+        // Simula siempre éxito
+        return response == "dummy_captcha"
+    }
+}
 class LoginActivity : ComponentActivity() {
     private val loginUseCase by lazy {
         com.example.eqx_android.domain.usecase.SecureLoginUseCase(
-            com.example.eqx_android.data.repository.SecureApiServiceImpl(com.example.eqx_android.util.Constants.BASE_URL)
+            com.example.eqx_android.data.repository.SecureApiServiceImpl(
+                com.example.eqx_android.util.Constants.BASE_URL,
+                this
+            )
         )
     }
     private lateinit var jwtDataStore: JwtDataStore

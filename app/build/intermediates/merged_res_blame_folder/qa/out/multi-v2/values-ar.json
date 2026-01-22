@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.eqx_android.app-mergeQaResources-51:/values-ar/values-ar.xml",
+            "outputFile": "com.example.eqx_android.app-mergeQaResources-53:/values-ar/values-ar.xml",
             "map": [
                 {
                     "source": "C:\\Users\\piedr\\.gradle\\caches\\transforms-4\\31384a280142b2b0623d892969a4a89f\\transformed\\jetified-ui-release\\res\\values-ar\\values-ar.xml",

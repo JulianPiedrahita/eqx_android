@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.eqx_android.app-mergeReleaseResources-51:/values-bg/values-bg.xml",
+            "outputFile": "com.example.eqx_android.app-mergeReleaseResources-53:/values-bg/values-bg.xml",
             "map": [
                 {
                     "source": "C:\\Users\\piedr\\.gradle\\caches\\transforms-4\\991c1dfd0f657cdd3e9e56e6eeb25b4e\\transformed\\appcompat-1.6.1\\res\\values-bg\\values-bg.xml",

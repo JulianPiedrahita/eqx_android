@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.eqx_android.app-mergeDebugResources-55:/values-port/values-port.xml",
+            "outputFile": "com.example.eqx_android.app-mergeDebugResources-57:/values-port/values-port.xml",
             "map": [
                 {
                     "source": "C:\\Users\\piedr\\.gradle\\caches\\transforms-4\\991c1dfd0f657cdd3e9e56e6eeb25b4e\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
